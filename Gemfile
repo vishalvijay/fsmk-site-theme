@@ -38,3 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'compass-rails'
+gem 'font-awesome-sass'
+gem 'haml'
+gem 'modernizr-rails'
