@@ -3,5 +3,6 @@
   %head= render :partial => 'layouts/header'
   %body
     .main-content
+      = render :partial => 'layouts/navbar'
       = yield
     = javascript_include_tag 'application'
