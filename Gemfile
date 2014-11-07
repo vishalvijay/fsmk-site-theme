@@ -52,3 +52,4 @@ gem 'modernizr-rails'
 #heroku
 gem 'rails_12factor', group: :production
 gem 'heroku-deflater', :group => :production
+ruby "2.1"
