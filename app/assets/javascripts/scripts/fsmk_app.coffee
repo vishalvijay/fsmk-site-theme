@@ -1,6 +1,6 @@
 class FSMK.App
 
-  constructor: ->
+  initialize: ->
     U.resize @onResize
 
   onResize: =>

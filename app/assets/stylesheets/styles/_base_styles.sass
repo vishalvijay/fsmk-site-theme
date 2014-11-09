@@ -5,3 +5,22 @@
 .v-f-t
   @extend .visible-sm
   @extend .visible-xs
+.panel-body
+  color: $gray-dark
+  @extend .text-center
+  .logo
+    color: $gray-darker
+    font-size: 170px
+    +respond-to(only-tab)
+      font-size: 150px
+    +respond-to(mob)
+      font-size: 120px
+  .android-logo
+    +fa-make(android)
+    @extend .logo
+  .desktop-logo
+    +fa-make(desktop)
+    @extend .logo
+  .web-logo
+    +fa-make(globe)
+    @extend .logo

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require bxslider
 //= require plugins/jquery.ba-throttle-debounce
 //= require scripts/fsmk
 //= require scripts/fsmk_app

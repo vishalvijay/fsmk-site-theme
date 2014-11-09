@@ -1,0 +1,25 @@
+.welcome-section
+  @extend .container-fluid
+  background: $brand-primary
+  color: white
+  padding-top: $grid-gutter-width
+  padding-bottom: $grid-gutter-width
+  .logo
+    @extend .img-responsive
+    @extend .h-f-t
+    +center-block
+  font-weight: lighter
+  .cname
+    font-size: 80px
+    +respond-to(desk-min)
+      font-size: 60px
+    +respond-to(only-tab)
+      font-size: 44px
+    +respond-to(mob)
+      font-size: 34px
+  .intro
+    font-size: 30px
+    +respond-to(only-tab)
+      font-size: 24px
+    +respond-to(mob)
+      font-size: 16px
