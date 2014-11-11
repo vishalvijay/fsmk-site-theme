@@ -3,18 +3,21 @@
   .row
     .col-md-3
       %br
-      %ul.list-group
-        %li.list-group-item Cras justo odio
-        %li.list-group-item Dapibus ac facilisis in
-        %li.list-group-item Morbi leo risus
-        %li.list-group-item Porta ac consectetur ac
-        %li.list-group-item Vestibulum at eros
-      %ul.list-group
-        %li.list-group-item Cras justo odio
-        %li.list-group-item Dapibus ac facilisis in
-        %li.list-group-item Morbi leo risus
-        %li.list-group-item Porta ac consectetur ac
-        %li.list-group-item Vestibulum at eros
+      .list-group
+        %a.list-group-item.active{:href => "#"}
+          .heading Recently Completed Events
+        %a.list-group-item{:href => "#"}
+          %h4.list-group-item-heading Email Encryption using Thunderbird and Enigmail
+          %p.list-group-item-text 08/24/2014 - 10:30
+        %a.list-group-item{:href => "#"}
+          %h4.list-group-item-heading Bulding Web Apps using AngularJS
+          %p.list-group-item-text 08/10/2014 - 10:30
+        %a.list-group-item{:href => "#"}
+          %h4.list-group-item-heading Sunday School - Learning Git (Basics + Advanced)
+          %p.list-group-item-text 08/03/2014 - 11:00
+        %a.list-group-item{:href => "#"}
+          %h4.list-group-item-heading Sunday School - DuckDuckGo Goodies & Mobile API Development
+          %p.list-group-item-text 02/16/2014 - 14:00
     .col-md-9
       .page-header
         %h1
