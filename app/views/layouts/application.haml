@@ -2,7 +2,8 @@
 %html
   %head= render :partial => 'layouts/header'
   %body
+    = render :partial => 'layouts/navbar'
     .main-content
-      = render :partial => 'layouts/navbar'
       = yield
+    = render :partial => 'layouts/footer'
     = javascript_include_tag 'application'

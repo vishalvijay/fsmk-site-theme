@@ -48,7 +48,6 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'haml'
 gem 'modernizr-rails'
-gem 'bxslider-rails'
 
 #heroku
 gem 'rails_12factor', group: :production
