@@ -1,33 +1,24 @@
 .fsmk-carousel
-  .row.h-f-t
-    .col-md-12
-      .panel
-        .panel-body
-          #fsmk-carousel.carousel.slide{"data-ride" => "carousel"}
-            %ol.carousel-indicators
-              %li.active{"data-slide-to" => "0", "data-target" => "#fsmk-carousel"}
-              %li{"data-slide-to" => "1", "data-target" => "#fsmk-carousel"}
-              %li{"data-slide-to" => "2", "data-target" => "#fsmk-carousel"}
+  .row
+    #fsmk-carousel.carousel.slide{"data-ride" => "carousel"}
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#fsmk-carousel"}
+        %li{"data-slide-to" => "1", "data-target" => "#fsmk-carousel"}
+        %li{"data-slide-to" => "2", "data-target" => "#fsmk-carousel"}
 
-            .carousel-inner{:role => "listbox"}
-              .item.active
-                =image_tag "slides/slide_1.jpg", alt: "Team FSMK"
-                .carousel-caption
-                  %h3 Free Software Movement Karnataka
-                  %p Free software is the future... The future is ours..
-              .item
-                =image_tag "slides/slide_2.jpg", alt: "Summer Camp 2014"
-                .carousel-caption
-                  %h3 FSMK Summer Camp 2014
-                  %p FSMK is planning a 9 days Industry Orientation workshop during the summer break , July 19 - 27.
-              .item
-                =image_tag "slides/slide_3.jpg", alt: "Music making using free software"
-                .carousel-caption
-                  %h3 Music making using free software
-                  %p Day long hands on workshop
-            %a.left.carousel-control{"data-slide" => "prev", :href => "#fsmk-carousel", :role => "button"}
-              %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
-              %span.sr-only Previous
-            %a.right.carousel-control{"data-slide" => "next", :href => "#fsmk-carousel", :role => "button"}
-              %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
-              %span.sr-only Next    }
+      .carousel-inner{:role => "listbox"}
+        .item.active
+          =image_tag "slides/slide_1.jpg", alt: "Team FSMK"
+          .carousel-caption
+            %h3 Free Software Movement Karnataka
+            %p Free software is the future... The future is ours..
+        .item
+          =image_tag "slides/slide_2.jpg", alt: "Summer Camp 2014"
+          .carousel-caption
+            %h3 FSMK Summer Camp 2014
+            %p FSMK is planning a 9 days Industry Orientation workshop during the summer break , July 19 - 27.
+        .item
+          =image_tag "slides/slide_3.jpg", alt: "Music making using free software"
+          .carousel-caption
+            %h3 Music making using free software
+            %p Day long hands on workshop
