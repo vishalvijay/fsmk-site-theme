@@ -1,0 +1,38 @@
+.tile
+  .bg
+    img
+      +center-block
+  &.red
+    .bg
+      background: #e74c3c
+  &.green
+    .bg
+      background: #2ecc71
+  &.yellow
+    .bg
+      background: #f1c40f
+  .overlay
+    background: rgba(black, 0.6)
+    position: absolute
+    bottom: 0px
+    right: 0px
+    left: 0px
+    margin-left: $grid-gutter-width/2
+    margin-right: $grid-gutter-width/2
+    text-align: center
+    padding: 5px
+    h3
+      +ellipsis
+      padding: 0px
+      color: white
+      font-weight: 300
+      color: white
+      margin-top: 10px
+    p
+      display: none
+      color: white
+  &:hover
+    .overlay
+      top: 0px
+      p
+        display: block

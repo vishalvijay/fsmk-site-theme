@@ -3,6 +3,7 @@ class FSMK.App
   initialize: ->
     U.resize @onResize
     @onResize()
+    @tileAnimation()
 
   onResize: =>
     @fixImportantPanelHeight()
@@ -15,3 +16,9 @@ class FSMK.App
         $(this).outerHeight()
       ).get()
       panels.css("min-height", maxHeight)
+
+  tileAnimation: ->
+    $(".tile .overlay").hover ->
+      $(".content", $(this)).addClass 'animated fadeInUp'
+    , ->
+      $(".content", $(this)).removeClass('animated fadeInUp')
