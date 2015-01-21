@@ -1,0 +1,41 @@
+.tile_menu
+  .tile-col
+    cursor: pointer
+    +make-md-column(3)
+    padding: 0px
+    +filter(grayscale(100%))
+    img
+      @extend .img-responsive
+    .black-overlay
+      background: rgba(0, 0, 0, 0.43)
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+    &:hover
+      +filter(grayscale(0))
+      .black-overlay
+        background: rgba(0, 0, 0, 0.2)
+    .title
+      text-align: center
+      font-weight: 600
+      font-size: 25px
+      color: white
+      position: absolute
+      bottom: 10px
+      width: 100%
+      text-shadow: #5F5F5F 1px 1px 0px
+    &.color
+      +filter(grayscale(30%))
+      &:hover
+        +filter(grayscale(0))
+      .title
+        top: 50%
+        bottom: initial
+    &.red
+      .black-overlay
+        background: #e74c3c
+    &.green
+      .black-overlay
+        background: #2ecc71
