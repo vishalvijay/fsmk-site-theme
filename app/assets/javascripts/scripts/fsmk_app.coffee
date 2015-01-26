@@ -3,22 +3,16 @@ class FSMK.App
   initialize: ->
     U.resize @onResize
     @onResize()
-    @tileAnimation()
+    @makeTileBlink()
 
   onResize: =>
-    @fixImportantPanelHeight()
 
-  fixImportantPanelHeight: ->
-    panels = $(".important .panel")
-    panels.removeAttr "style"
-    unless U.isScreen()
-      maxHeight = Math.max.apply null, panels.map(->
-        $(this).outerHeight()
-      ).get()
-      panels.css("min-height", maxHeight)
-
-  tileAnimation: ->
-    $(".tile .overlay").hover ->
-      $(".content", $(this)).addClass 'animated fadeInUp'
-    , ->
-      $(".content", $(this)).removeClass('animated fadeInUp')
+  makeTileBlink: ->
+    blinkIndex = 0
+    setInterval ->
+      tileMenu = $(".tile_menu")
+      $(".active", tileMenu).removeClass "active"
+      tileCol = $(".tile-col", tileMenu)
+      active = $(tileCol[blinkIndex++%tileCol.length])
+      active.addClass "active" if active
+    , 1000

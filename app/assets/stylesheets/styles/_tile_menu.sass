@@ -1,9 +1,12 @@
 .tile_menu
+  position: relative
+  .row
+    +box-shadow(0px 4px 9px 0px rgba(0, 0, 0, 0.60))
   .tile-col
     cursor: pointer
-    +make-md-column(3)
+    +make-md-column(2)
     padding: 0px
-    +filter(grayscale(100%))
+    +filter(grayscale(50%))
     img
       @extend .img-responsive
     .black-overlay
@@ -13,7 +16,7 @@
       bottom: 0
       left: 0
       right: 0
-    &:hover
+    &:hover, &.active
       +filter(grayscale(0))
       .black-overlay
         background: rgba(0, 0, 0, 0.2)
@@ -28,7 +31,7 @@
       text-shadow: #5F5F5F 1px 1px 0px
     &.color
       +filter(grayscale(30%))
-      &:hover
+      &:hover, &.active
         +filter(grayscale(0))
       .title
         top: 50%
