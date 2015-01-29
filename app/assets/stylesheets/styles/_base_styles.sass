@@ -7,3 +7,18 @@ body
 .v-f-t
   @extend .visible-sm
   @extend .visible-xs
+.section-title-row
+  +make-row
+  background-color: $brand-secondary
+  margin-bottom: $grid-gutter-width
+  .section-title
+    font-size: 24px
+    font-weight: 600
+    color: white
+    +make-md-column(10)
+    +make-md-column-offset(1)
+    padding-top: 8px
+    padding-bottom: 8px
+    +respond-to
+      font-size: 22px
+      text-align: center

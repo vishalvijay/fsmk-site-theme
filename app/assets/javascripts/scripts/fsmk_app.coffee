@@ -10,9 +10,10 @@ class FSMK.App
   makeTileBlink: ->
     blinkIndex = 0
     setInterval ->
-      tileMenu = $(".tile_menu")
-      $(".active", tileMenu).removeClass "active"
-      tileCol = $(".tile-col", tileMenu)
-      active = $(tileCol[blinkIndex++%tileCol.length])
-      active.addClass "active" if active
+      unless U.isScreen()
+        tileMenu = $(".tile_menu")
+        $(".active", tileMenu).removeClass "active"
+        tileCol = $(".tile-col", tileMenu)
+        active = $(tileCol[blinkIndex++%tileCol.length])
+        active.addClass "active" if active
     , 1000
