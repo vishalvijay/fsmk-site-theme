@@ -7,20 +7,17 @@
     cursor: pointer
     +make-md-column(2)
     padding: 0px
-    +filter(grayscale(50%))
     img
       @extend .img-responsive
     .black-overlay
-      background: rgba(0, 0, 0, 0.43)
       position: absolute
       top: 0
       bottom: 0
       left: 0
       right: 0
     &:hover, &.active
-      +filter(grayscale(0))
       .black-overlay
-        background: rgba(0, 0, 0, 0.2)
+        +box-shadow(0px -7px 5px -2px rgba($brand-primary, 0.50))
     .title
       text-align: center
       font-weight: 600
@@ -30,19 +27,6 @@
       bottom: 10px
       width: 100%
       text-shadow: #5F5F5F 1px 1px 0px
-    &.color
-      +filter(grayscale(30%))
-      &:hover, &.active
-        +filter(grayscale(0))
-      .title
-        top: 50%
-        bottom: initial
-    &.red
-      .black-overlay
-        background: #e74c3c
-    &.green
-      .black-overlay
-        background: #2ecc71
   .list-group
     margin-bottom: 0px
     .list-group-item
