@@ -30,4 +30,4 @@ class FSMK.App
       12.9473557
       77.5996612
     ]).addTo(map)
-    marker.bindPopup('<b>FSMK Office</b><br>121/17, 12th Cross, Mavalli, Wilson Garden, Bangalore, Bangalore Urban, Karnataka, 560030, India.').openPopup()
+    marker.bindPopup('<b>FSMK Office</b><br>121/17, 12th Cross, Mavalli, Wilson Garden,<br>Bangalore, Bangalore Urban,<br> Karnataka, 560030, India.').openPopup()
