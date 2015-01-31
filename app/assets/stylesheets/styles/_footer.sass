@@ -1,0 +1,58 @@
+footer
+  margin-top: 100px
+  background-color: $footer-bg
+  color: $footer-color
+  .logo-small
+    img
+      @extend .img-responsive
+      +center-block
+      padding: 30px
+  .social
+    padding: 20px
+    +respond-to
+      padding: 10px
+    .title
+      .social-logo
+        display: inline-block
+        background: white
+        font-size: 30px
+        text-align: center
+        width: 40px
+        height: 40px
+        +border-radius(50%)
+        .social-fa
+          width: 40px
+          line-height: 40px
+        .twitter
+          @extend .social-fa
+          color: #55ACEE
+          +fa-make(twitter)
+        .facebook
+          @extend .social-fa
+          color: #48649F
+          +fa-make(facebook)
+      .social-title
+        display: inline-block
+        font-size: 22px
+        margin-left: 10px
+        font-weight: 600
+    .body
+      padding: 20px 10px
+      ul
+        @extend .list-unstyled
+        li
+          &.tweet
+            margin-bottom: 10px
+            .icon
+              display: inline-block
+              +fa-make(twitter)
+            .tweet-body
+              display: inline-block
+              position: relative
+              left: 10px
+              .message
+              .auther
+              .time
+                font-size: 12px
+                font-weight: 300
+                font-style: italic

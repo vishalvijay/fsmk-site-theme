@@ -1,0 +1,45 @@
+%footer
+  .container-fluid
+    .row
+      .col-md-4
+        .social
+          .title
+            .social-logo
+              .twitter
+            .social-title Twitter
+          .body
+            %ul
+              %li.tweet
+                .icon
+                .tweet-body
+                  .message
+                    KBF invites you to the screening of 'Swapnadanam', directed by K G George, today at 6.30 PM at the Pavilion, Aspinwall House
+                  %a.auther #KochiBiennale
+                  .time 12 hours ago
+              %li.tweet
+                .icon
+                .tweet-body
+                  .message
+                    KBF invites you to the screening of 'Swapnadanam', directed by K G George
+                  %a.auther #Kochi
+                  .time 12 hours ago
+      .col-md-4
+        .social
+          .title
+            .social-logo
+              .facebook
+            .social-title Facebook
+          .body
+            #fb-root
+            :javascript
+              (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=468815966571997&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+            .fb-like-box{"data-colorscheme" => "dark", "data-header" => "true", "data-href" => "https://www.facebook.com/FacebookDevelopers", "data-show-border" => "true", "data-show-faces" => "true", "data-stream" => "false"}
+      .col-md-4
+        .logo-small
+          =image_tag("welcome_logo.png", alt: "FSMK")
