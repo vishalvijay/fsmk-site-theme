@@ -1,0 +1,17 @@
+.container-fluid
+  .section-title-row
+    .section-title
+      Contact Us
+.container
+  .row
+    .col-md-8
+      #map
+    .col-md-4
+      %form#contact-us-form
+        .form-group
+          %label{:for => "email"} Email*
+          %input#email.form-control{:placeholder => "Email", :type => "email", "data-bv-notempty" => true, "data-bv-notempty-message" => "Email required", "data-bv-emailaddress" => true, "data-bv-emailaddress-message" => "Invalid email"}
+        .form-group
+          %label{:for => "message"} Message
+          %textarea#message.form-control{:placeholder => "Message"}
+        %button.btn.btn-default{:type => "submit"} Submit

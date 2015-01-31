@@ -15,3 +15,10 @@ window.U =
       $(window).width() < 1130 and U.isScreen("desk")
     else
       throw new Error("Unknown screen")
+
+  enableValidation: (view, options = {}) ->
+    defaultOpt =
+      live: "submitted"
+    view.bootstrapValidator $.extend({}, defaultOpt, options)
+    view.on "success.form.bv", (e) ->
+      e.preventDefault()
