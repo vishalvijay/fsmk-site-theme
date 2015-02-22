@@ -1,2 +1,48 @@
+.navbar
+  margin-bottom: 0px
+  +respond-to
+    padding-top: 8px
+    min-height: 44px
+    margin-bottom: 20px
 .nav-content-fix
-  height: $navbar-height+1
+  height: $navbar-height+21
+  +respond-to
+    height: 44px
+.navbar-collapse
+  +respond-to
+    margin-top: 8px
+.navbar-brand
+  a
+    color: white
+    cursor: pointer
+    margin-left: 5px
+    margin-right: 5px
+    font-size: 16px
+    &:hover
+      text-decoration: none
+      color: black
+.second-nav
+  border-bottom: 1px solid rgba($brand-primary, 0.5)
+  +respond-to
+    display: none
+  background: white
+  min-height: 50px
+  form
+    margin-top: 8px
+  .nav-logo
+    +center-block
+    padding: 2px
+    width: 46px
+    height: 48px
+    img
+      position: relative
+  ul.special-nav
+    margin-top: 13px
+    li
+      a
+        color: $gray-darker
+        font-size: 16px
+        cursor: pointer
+        background: transparent !important
+        &:hover
+          text-decoration: underline

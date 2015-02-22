@@ -6,6 +6,7 @@ class FSMK.App
     @makeTileBlink()
     @makeMap()
     U.enableValidation $("#contact-us-form")
+    @animateLogo()
 
   onResize: =>
 
@@ -31,3 +32,22 @@ class FSMK.App
       77.5996612
     ]).addTo(map)
     marker.bindPopup('<b>FSMK Office</b><br>121/17, 12th Cross, Mavalli, Wilson Garden,<br>Bangalore, Bangalore Urban,<br> Karnataka, 560030, India.').openPopup()
+
+  animateLogo: ->
+    repositon = ->
+      top = -20
+      maxHeight = 96
+      ratio = 10
+      windowTop = $(window).scrollTop()
+      logo = $(".nav-logo img")
+      currentTop = logo.cssInt("top")
+      currentMaxHeight = logo.cssInt("max-height")
+      newMaxHeigth = maxHeight - (windowTop/ratio)
+      newMaxHeigth = 46 if newMaxHeigth < 46
+      newTop = -20 + (windowTop/ratio)
+      newTop = 0 if newTop > 0
+      logo.css "max-height", newMaxHeigth
+      logo.css "top", newTop
+    $(window).scroll ->
+      repositon()
+    repositon()

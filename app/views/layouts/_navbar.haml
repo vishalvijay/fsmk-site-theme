@@ -1,63 +1,46 @@
-%header.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
-  .container-fluid
-    .navbar-header
-      %button.navbar-toggle.collapsed{"data-target" => "#bs-fsmk-navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "#"} FSMK
-    #bs-fsmk-navbar-collapse.collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "#"} Home
-        %li
-          %a{:href => "#"} Activities
-        %li
-          %a{:href => "#"} Chapters
-        %li.h-f-t
-          %a{:href => "#"} Projects
-        %li.h-f-t
-          %a{:href => "#"} About Us
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            More
-            %span.caret
-          %ul.dropdown-menu{:role => "menu"}
-            %li.v-f-t
-              %a{:href => "#"} Projects
-            %li.v-f-t
-              %a{:href => "#"} About Us
-            %li
-              %a{:href => "#"} GNU/Linux Users Group
-            %li
-              %a{:href => "#"} Mailing List
-            %li
-              %a{:href => "#"} Contact Us
-            %li.divider
-            %li
-              %a{:href => "#"} FSMK Organization
-            %li
-              %a{:href => "#"} Free Hardware Movement
-            %li
-              %a{:href => "#"} FSMK Localization Sprint
-      %form.navbar-form.navbar-right{:role => "search"}
-        .input-group
-          %input.form-control{type: "text", placeholder: "Search"}
-          %span.input-group-btn
-            %button.btn.btn-default{:type => "button"}
-              %span.glyphicon.glyphicon-search
-      %ul.nav.navbar-nav.navbar-right
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            Vishal...
-            %span.caret
-          %ul.dropdown-menu{:role => "menu"}
-            %li
-              %a{:href => "#"} Account
+%header
+  .navbar-fixed-top
+    %nav.navbar.navbar-default{:role => "navigation"}
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#bs-fsmk-navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          .navbar-brand{:href => "#"}
+            %a.fa.fa-facebook
+            %a.fa.fa-google-plus
+            %a.fa.fa-twitter
+        #bs-fsmk-navbar-collapse.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li.active
+              %a{:href => "#"} Home
             %li
               %a{:href => "#"} Activities
-            %li.divider
             %li
-              %a{:href => "#"} Logout
+              %a{:href => "#"} Chapters
+            %li.h-f-t
+              %a{:href => "#"} Projects
+            %li.h-f-t
+              %a{:href => "#"} About Us
+          .v-f-t
+            = render :partial => 'layouts/nav_search'
+    .second-nav
+      .container
+        .row
+          .col-sm-2
+            .nav-logo
+              =image_tag "new_logo_bg_small.png"
+          .col-sm-7
+            %ul.nav.navbar-nav.special-nav
+              %li
+                %a Organization
+              %li
+                %a Free Hardware Movement
+              %li
+                %a Localization Sprint
+          .col-sm-3.pull-right
+            .h-f-t
+              = render :partial => 'layouts/nav_search'
 .nav-content-fix
