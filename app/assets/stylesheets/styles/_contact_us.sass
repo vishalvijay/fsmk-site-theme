@@ -1,2 +1,25 @@
 #map
   height: 300px
+.link-list
+  a.link
+    cursor: pointer
+    text-decoration: none !important
+    margin-bottom: 20px
+    background: $gray-lighter
+    height: 42px
+    line-height: 30px
+    vertical-align: middle
+    padding: 6px 10px
+    color: $brand-primary
+    width: 100%
+    +fa-make(chevron-right)
+    &:before
+      position: absolute
+      right: 10px
+      background: $brand-secondary
+      color: white
+      margin-top: -6px
+      padding: 6px 10px
+    &:hover
+      background: $brand-primary
+      color: white
