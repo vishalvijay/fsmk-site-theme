@@ -29,18 +29,43 @@
     .second-nav
       .container
         .row
-          .col-sm-2
-            .nav-logo
-              =image_tag "new_logo_bg_small.png"
-          .col-sm-7
+          .col-sm-1
+            %a.nav-logo{href: "/"}
+              =image_tag "fsmk_icon_small.png"
+          .col-sm-11
             %ul.nav.navbar-nav.special-nav
               %li
-                %a Organization
+                %a Menu 1
               %li
-                %a Free Hardware Movement
+                %a Menu 2
               %li
-                %a Localization Sprint
-          .col-sm-3.pull-right
-            .h-f-t
-              = render :partial => 'layouts/nav_search'
+                %a Menu 3
+              %li
+                %a Menu 4
+              %li.dropdown
+                %a#dLabel{"aria-expanded" => "false", "aria-haspopup" => "true", "data-target" => "#", "data-toggle" => "dropdown", :href => "http://example.com", :role => "button"}
+                  Menu5
+                  %span.caret
+                %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
+                  %li{:role => "presentation"}
+                    %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Sub Menu 1
+                  %li{:role => "presentation"}
+                    %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Sub Menu 2
+                  %li{:role => "presentation"}
+                    %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Sub Menu 3
+            .pull-right
+              .h-f-t
+                = render :partial => 'layouts/nav_search'
+            %ul.nav.navbar-nav.special-nav.pull-right
+              %li.dropdown
+                %a#dLabel{"aria-expanded" => "false", "aria-haspopup" => "true", "data-target" => "#", "data-toggle" => "dropdown", :href => "http://example.com", :role => "button"}
+                  More Options
+                  %span.caret
+                %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
+                  %li{:role => "presentation"}
+                    %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Organization
+                  %li{:role => "presentation"}
+                    %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Free Hardware Movement
+                  %li{:role => "presentation"}
+                    %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Localization Sprint
 .nav-content-fix
