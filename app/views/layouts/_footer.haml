@@ -1,5 +1,5 @@
 %footer
-  .container-fluid
+  .footer-container
     .row
       .col-md-4
         .social
@@ -23,23 +23,70 @@
                     KBF invites you to the screening of 'Swapnadanam', directed by K G George
                   %a.auther #Kochi
                   .time 12 hours ago
-      .col-md-4
-        .social
-          .title
-            .social-logo
-              .facebook
-            .social-title Facebook
-          .body
-            #fb-root
-            :javascript
-              (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=468815966571997&version=v2.0";
-                fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));
-            .fb-like-box{"data-colorscheme" => "dark", "data-header" => "true", "data-href" => "https://www.facebook.com/FacebookDevelopers", "data-show-border" => "true", "data-show-faces" => "true", "data-stream" => "false"}
+      .col-md-2
+        .section-list
+          %h4 Section 1
+          %ul.list-unstyled
+            %li
+              %a{href: "#"}Link 1
+            %li
+              %a{href: "#"}Link 2
+            %li
+              %a{href: "#"}Link 3
+            %li
+              %a{href: "#"}Link 4
+          %h4 Section 2 
+          %ul.list-unstyled
+            %li
+              %a{href: "#"}Link 1
+            %li
+              %a{href: "#"}Link 2
+            %li
+              %a{href: "#"}Link 3
+            %li
+              %a{href: "#"}Link 4
+      .col-md-2
+        .section-list
+          %h4 Section 1
+          %ul.list-unstyled
+            %li
+              %a{href: "#"}Link 1
+            %li
+              %a{href: "#"}Link 2
+            %li
+              %a{href: "#"}Link 3
+            %li
+              %a{href: "#"}Link 4
+          %h4 Section 2 
+          %ul.list-unstyled
+            %li
+              %a{href: "#"}Link 1
+            %li
+              %a{href: "#"}Link 2
+            %li
+              %a{href: "#"}Link 3
+            %li
+              %a{href: "#"}Link 4
       .col-md-4
         .logo-small
           =image_tag("welcome_logo.png", alt: "FSMK")
+  .container
+    .subfooter-row
+      .col-md-12
+        %ul.list-inline
+          %li
+            %a{href: "#"}Link 1
+          %li
+            %a{href: "#"}Link 2
+          %li
+            %a{href: "#"}Link 3
+          %li
+            %a{href: "#"}Link 4
+          %li
+            %a{href: "#"}Link 5
+  .copy-right-container
+    .row
+      .col-md-4.col-xs-12.pull-right
+        Free Software Movement Karnataka
+        %a.controller-pull-right{:href => "http://creativecommons.org/licenses/by/4.0/", :rel => "license"}
+          %img{:alt => "Creative Commons License", :src => "https://i.creativecommons.org/l/by/4.0/80x15.png", :style => "border-width:0"}

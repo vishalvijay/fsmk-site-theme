@@ -36,8 +36,10 @@
     width: 46px
     height: 48px
     img
-      +filter(drop-shadow(3px 3px 1px rgba(black,0.58)))
+      +filter(drop-shadow(3px 3px 1px rgba(black,0.5)))
       position: relative
+      &:hover
+        +filter(drop-shadow(4px 4px 1px rgba(black,0.45)))
   .nav-title
     font-size: 22px
     position: relative
