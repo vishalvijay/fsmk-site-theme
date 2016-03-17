@@ -68,6 +68,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    leaflet-rails (0.7.7)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -151,6 +152,7 @@ DEPENDENCIES
   heroku-deflater
   jbuilder (~> 2.0)
   jquery-rails
+  leaflet-rails
   modernizr-rails
   pg (~> 0.17.0)
   rails (= 4.1.4)

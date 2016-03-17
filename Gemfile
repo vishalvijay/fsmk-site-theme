@@ -49,6 +49,7 @@ gem 'font-awesome-sass'
 gem 'haml'
 gem 'modernizr-rails'
 gem 'bootstrap-validator-rails'
+gem 'leaflet-rails'
 
 #heroku
 gem 'rails_12factor', group: :production

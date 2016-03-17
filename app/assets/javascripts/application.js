@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require bootstrapValidator.min
 //= require plugins/jquery.ba-throttle-debounce
+//= require leaflet
 //= require scripts/fsmk
 //= require scripts/fsmk_app
 //= require_tree .

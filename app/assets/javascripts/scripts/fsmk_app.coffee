@@ -23,33 +23,17 @@ class FSMK.App
     , 1000
 
   makeMap: ->
-    mapCanvas = $("#map")[0]
-    location = new google.maps.LatLng(12.9473557, 77.5996612)
-    mapOptions =
-      center: location
-      zoom: 16
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    map = new google.maps.Map(mapCanvas, mapOptions)
-    
+    map = L.map('map').setView([12.9473557, 77.5996612], 16)
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors').addTo map
     contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">FSMK Office</h1>'+
+      '<h3 id="firstHeading" class="firstHeading">FSMK Office</h3>'+
       '<div id="bodyContent">'+
       '<p>121/17, 12th Cross, Mavalli, Wilson Garden,<br>Bangalore, Bangalore Urban,<br> Karnataka, 560030, India</p>'+
       '</div>'+
       '</div>';
-
-    infowindow = new google.maps.InfoWindow content: contentString
-
-    marker = new google.maps.Marker
-      position: location
-      map: map
-      title: 'FSMK Office'
-
-    google.maps.event.addListener marker, 'click', ->
-      infowindow.open(map, marker)
-
+    L.marker([12.9473557, 77.5996612]).addTo(map).bindPopup(contentString).openPopup()
 
   animateLogo: ->
     repositon = ->
