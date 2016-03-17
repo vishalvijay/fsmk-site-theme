@@ -7,6 +7,7 @@ class FSMK.App
     @makeMap()
     U.enableValidation $("#contact-us-form")
     @animateLogo()
+    @fixThumbnailHeight()
 
   onResize: =>
 
@@ -68,3 +69,21 @@ class FSMK.App
     $(window).scroll ->
       repositon()
     repositon()
+
+  fixThumbnailHeight: ->
+    thumbnails = $(".thumbnail")
+    while thumbnails.length
+      thumb = thumbnails.first()
+      parent = thumb.parent()
+      while parent.children().length is 1
+        parent = parent.parent()
+      new_thumbnails = $(".thumbnail", parent)
+      maxHeight = 0
+      new_thumbnails.each (i, item) ->
+        index = $.inArray(item, thumbnails)
+        if index > -1
+          thumbnails.splice(index, 1)
+        height = new_thumbnails.eq(i).height()
+        if height > maxHeight
+          maxHeight = height
+      new_thumbnails.height(maxHeight)
